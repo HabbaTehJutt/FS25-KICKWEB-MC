@@ -20,7 +20,8 @@
 .letter.T svg,
 .letter.M svg,
 .letter.L svg,
-.letter.N svg {
+.letter.N svg,
+.letter.A svg {
     width: 26vw; 
     height: auto;
 }
@@ -45,6 +46,13 @@
  animation-iteration-count: infinite;
 }
 .letter.N path{
+    transition:  1.5s ease-out;
+ animation-name: N-Stretch;
+ animation-duration: 4s;
+ animation-iteration-count: infinite;
+}
+
+.letter.A path{
     transition:  1.5s ease-out;
  animation-name: N-Stretch;
  animation-duration: 4s;
@@ -104,6 +112,20 @@
    
     100%{
         d: path("M0,214.75V0h23.88l92.58,168.94V0h22.27v214.75h-23.88L22.41,45.78v168.97H0Z"); 
+    }
+}
+
+@keyframes A-Stretch{
+    0%{
+        d: path("M200.68,214.75h-32.08l-24.9-65.33H53.76l-23.73,65.33H0L82.47,0h30.62l87.6,214.75ZM135.35,126.86L97.56,27.25l-36.04,99.61h73.83Z");
+    }
+
+    50%{
+        d: path("M709.68,214.75l-36.8-.16-115-65H136.88l-104,65-32.88.16L332.47,0h22.62l354.6,214.75ZM523.88,126.59L343.88,19.59l-167,107h347Z");
+    }
+
+    100%{
+        d: path("M200.68,214.75h-32.08l-24.9-65.33H53.76l-23.73,65.33H0L82.47,0h30.62l87.6,214.75ZM135.35,126.86L97.56,27.25l-36.04,99.61h73.83Z");
     }
 }
 
