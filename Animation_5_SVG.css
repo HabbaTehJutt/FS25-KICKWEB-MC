@@ -54,7 +54,7 @@
 
 .letter.A path{
     transition:  1.5s ease-out;
- animation-name: N-Stretch;
+ animation-name: A-Stretch;
  animation-duration: 4s;
  animation-iteration-count: infinite;
 }
