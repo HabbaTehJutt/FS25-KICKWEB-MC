@@ -21,7 +21,8 @@
 .letter.M svg,
 .letter.L svg,
 .letter.N svg,
-.letter.A svg {
+.letter.A svg,
+.letter.E svg {
     width: 26vw; 
     height: auto;
 }
@@ -52,12 +53,13 @@
  animation-iteration-count: infinite;
 }
 
-.letter.A path{
+.letter.E path{
     transition:  1.5s ease-out;
- animation-name: A-Stretch;
+ animation-name: E-Stretch;
  animation-duration: 4s;
  animation-iteration-count: infinite;
 }
+
 
 @keyframes M-Stretch {
     0%{
@@ -115,17 +117,18 @@
     }
 }
 
-@keyframes A-Stretch{
+
+@keyframes E-Stretch{
     0%{
-        d: path("M200.68,214.75h-32.08l-24.9-65.33H53.76l-23.73,65.33H0L82.47,0h30.62l87.6,214.75ZM135.35,126.86L97.56,27.25l-36.04,99.61h73.83Z");
+        d: path("M160.11,214.75H0V0h155.13v25.49H28.42v65.62h118.51v25.49H28.42v72.66h131.69v25.49Z");
     }
 
     50%{
-        d: path("M709.68,214.75l-36.8-.16-115-65H136.88l-104,65-32.88.16L332.47,0h22.62l354.6,214.75ZM523.88,126.59L343.88,19.59l-167,107h347Z");
+        d: path("M710.11,214.75H0V0h705.13v25.49H28.42v65.62h668.51v25.49H28.42v72.66h681.69v25.49Z")
     }
 
     100%{
-        d: path("M200.68,214.75h-32.08l-24.9-65.33H53.76l-23.73,65.33H0L82.47,0h30.62l87.6,214.75ZM135.35,126.86L97.56,27.25l-36.04,99.61h73.83Z");
+        d: path("M160.11,214.75H0V0h155.13v25.49H28.42v65.62h118.51v25.49H28.42v72.66h131.69v25.49Z");
     }
 }
 
