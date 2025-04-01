@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            height:100vh;
+        }
+        .letter.M{
+            grid-row:2/3;
+            grid-column:1/4;
+           
+        }
+
+        .letter.M path{
+            transition: all 1s ease;
+        }
+        .letter.M:hover path{
+           
+             d: path("M5.7,0l49.54,39.45L96.51,0h5.59l-.11,44.37h-4.71l.07-35.68-39.44,35.68h-5.34L4.78,8.58l-.07,35.79H0L.11,0h5.59Z");
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="letter M">
+            <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530.86 440.37">
+                <path d="M5.7,0l21.3,39.45L48.27,0h5.59l-.11,44.37h-4.71l.07-35.68-19.44,35.68h-5.34L4.78,8.58l-.07,35.79H0L.11,0h5.59Z"/>
+              </svg>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: relative;
+            animation: animateColor 3s infinite alternate;
+        }
+        @keyframes animateColor{
+            from{
+                background-color: blue;
+                left: 0px;
+            }
+            to{
+                background-color: red ;
+                left: 100px;
+            }
+        }
