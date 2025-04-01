@@ -21,7 +21,6 @@
 .letter.M svg,
 .letter.L svg,
 .letter.N svg,
-.letter.A svg,
 .letter.E svg {
     width: 26vw; 
     height: auto;
@@ -183,7 +182,7 @@
             }
     
         
-            
+       
  /* Verschiebungen mit transform */
  .word:nth-child(2) {
     transform: translateY(10vh) translateX(3vh); /* PLEX leicht nach unten verschieben */
@@ -196,7 +195,9 @@
 }
 .word:nth-child(6) {
     transform: translateY(5vh) translateX(-5vw); /* TER leicht nach unten verschieben */
-}
+} 
+
+
 /* Positionierung */
 .word:nth-child(1) { grid-column: 1 / 3; grid-row: 1 / 2; } /* COM */
 .word:nth-child(2) { grid-column: 4 / 6; grid-row: 1 / 2; } /* PLEX */
