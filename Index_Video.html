@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Example</title>
+</head>
+    <link rel="stylesheet" href="Index_Video.css">
+<body>
+
+    <h1>SCREENCAST OF BREAKPOINT</h1>
+
+    <!-- Video element -->
+    <video width="1440" controls>
+        <source src="Index_Video.mp4" type="video/mp4">
+        
+        <!-- Fallback text if video can't be played -->
+        Your browser does not support the video tag.
+    </video>
+    
+    <button onclick="goBack()">BACK</button>
+
+    <script>
+        function goBack() {
+            window.location.href = "Index.html";  // Replace with the desired HTML page
+        }
+    </script>
+</body>
+</html>

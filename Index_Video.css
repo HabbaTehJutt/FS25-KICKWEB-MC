@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    background-color: #000; /* Optional: background color */
+    font-family: Arial, sans-serif; /* Default font */
+}
+
+/* Title styling */
+h1 {
+    font-family: Arial, sans-serif; /* Example of custom font */
+    color: #ffffff; /* White text color */
+    font-size: 2rem;
+    position: absolute; /* Make the title float above the video */
+    top: 10px; /* Adjust distance from top */
+}
+
+/* Video container with rounded corners */
+video {
+    border-radius: 15px; /* Round the corners */
+    max-width: 100%; /* Ensure video is responsive */
+    max-height: 90%; /* Allow video to scale within the viewport */
+}
+
+Button {
+    top: left;
+    padding: 5px 15px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 1%;
+}
+button:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
