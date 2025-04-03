@@ -5,7 +5,7 @@
     grid-template-rows: repeat(4, 1fr);
     text-align: left;
 }
-.word {
+.word { /*Buchstaben nicht Animiert */
     display: flex;
     align-items: center;
     font-family:  sans-serif, 'Arial Narrow Bold', sans-serif;
@@ -25,9 +25,10 @@
 .letter.E svg {
     width: 26vw; 
     height: auto;
+    fill: black;
 }
 
-.letter.T path{
+.letter.T path{ /* Animationen */
     transition:  1.5s ease-out;
     animation-name: T-Stretch;
     animation-duration: 4s;
@@ -74,7 +75,7 @@
 }
 
 
-@keyframes M-Stretch {
+@keyframes M-Stretch { /* Animationen */
     0%{
         d: path("M201.86,214.75h-26.95V32.08l-61.23,182.67h-25.49L26.95,32.08v182.67H0V0h42.63l58.15,179L159.23,0h42.63v214.75Z"); 
     }
@@ -184,21 +185,20 @@
             grid-column: 6/7;
             grid-row: 3/5;
             text-align: right;
-            font-size: 1vw;
-            font-family: sans-serif, 'Arial Narrow Bold', sans-serif;
+            font-family:  sans-serif, 'Arial Narrow Bold', sans-serif;
             font-weight: medium;
             font-style: normal;
             font-size: normal;
-            color: black;
-            overflow: visible;
+            overflow: hidden;
             min-width: fit-content;
+            opacity: 100%;
+            font-size: 1vw;
             transform: translateY(-12vh) translateX(-1vh)
             
         }
         .pos4{ /*rsvp only*/
             grid-column: 3/4;
             grid-row: 3/4;
-
             text-align: right;
             font-size: 2vw;
             font-family: 'Arial Narrow Bold', sans-serif;
@@ -215,7 +215,7 @@
        
  /* Verschiebungen mit transform */
  .word:nth-child(1){
-    transform: translateY(-2vh)
+    transform: translateY(-2vh);
  }
  .word:nth-child(2) {
     transform: translateY(10vh) translateX(-3vh); /* PLEX leicht nach unten verschieben */
@@ -239,27 +239,33 @@
 .word:nth-child(5) { grid-column: 4 / 6; grid-row: 3 / 4; } /* MAT */
 .word:nth-child(6) { grid-column: 4 / 6; grid-row: 4 / 5; } /* TER */
 
-/* Deine bestehenden Styles bleiben unverändert */
 
-/* Media Query für Bildschirmgrößen max. 640px */
+/* Breakpoint für Handy max. 640px */
 @media (max-width: 640px) {
+    body {
+        background-color: black; /* Stellt sicher, dass der gesamte Hintergrund schwarz ist */
+        margin: 0;
+        padding: 0;
+    }
     .container {
         height: 100vh;
+        width: 100vw;
+        box-sizing: border-box;
+        background-color: black;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, 1fr);
-        text-align: left; /* 6 Reihen, die automatisch an den Inhalt angepasst werden */
-        background-color: black;
-    }
-
-    .word {
-        font-size: 20vw; /* Anpassen der Schriftgröße für kleinere Bildschirme */
-        text-align: center; /* Zentriert die Wörter */
-        gap: 2vw; /* Zwischenraum zwischen den Wörtern */
-        color: white;
+        text-align: left; 
+        overflow: hidden;
         
     }
 
+    .word {
+        font-size: 20vw; 
+        text-align: center; 
+        gap: 2vw; 
+        color: white;
+    }
 
     .letter.M svg,
     .letter.L svg,
@@ -267,39 +273,56 @@
     .letter.T2 svg,
     .letter.N svg,
     .letter.E svg {
-        width: 47vw; /* SVG-Größe relativ zur Schriftgröße */
-        height: auto; /* Erhalte das Seitenverhältnis */
-        background-color: white;
+        width: 47vw; 
+        height: auto; 
+        fill: white;
     }
-
-   /* .kleinWort {
-        font-size: 3vw; 
-        text-align: center; 
-        font-size: normal;
-    }*/
 
     .word:nth-child(1), .word:nth-child(2), .word:nth-child(3), .word:nth-child(4), .word:nth-child(5), .word:nth-child(6) {
-        transform: none;
+        transform: none; /* deaktiviert all die alten Positionierungen */
     }
 
+    .word:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 2; transform: translateX(2vh);} /* COM */
+    .word:nth-child(2) { grid-column: 1 / 2; grid-row: 2 / 3; transform: translateX(2vh);} /* PLEX */
+    .word:nth-child(3) { grid-column: 1 / 2; grid-row: 3 / 4; transform: translateX(2vh);} /* ITY */
+    .word:nth-child(4) { grid-column: 1 / 2; grid-row: 4 / 5; transform: translateX(2vh);} /* IN */
+    .word:nth-child(5) { grid-column: 1 / 2; grid-row: 5 / 6; transform: translateX(2vh);} /* MAT */
+    .word:nth-child(6) { grid-column: 1 / 2; grid-row: 6 / 7; transform: translateX(2vh);} /* TER */
 
-    /* Entferne oder passe alle transform-Eigenschaften an, um das Layout zu verbessern */
-    .word:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 2; } /* COM */
-    .word:nth-child(2) { grid-column: 1 / 2; grid-row: 2 / 3; } /* PLEX */
-    .word:nth-child(3) { grid-column: 1 / 2; grid-row: 3 / 4; } /* ITY */
-    .word:nth-child(4) { grid-column: 1 / 2; grid-row: 4 / 5; } /* IN */
-    .word:nth-child(5) { grid-column: 1 / 2; grid-row: 5 / 6; } /* MAT */
-    .word:nth-child(6) { grid-column: 1 / 2; grid-row: 6 / 7; } /* TER */
-
-   /* 
-    .kleinWort.pos1, .kleinWort.pos2, .pos3, .pos4 {
-        text-align: center; 
-        font-size: 3vw; 
+    .kleinWort {
+        font-size: 2vw; 
+        text-align: left;
+        font-size: normal;
+        color: white;   
     }
+        .kleinWort.pos1 { /* Further information */
+            grid-column: 1 / 2; 
+            grid-row: 1 / 2;
+            transform: translateX(2vh) translateY(14vh);
+        }
+        .kleinWort.pos2 { /* Ted Talks */
+            grid-column: 1 / 2; 
+            grid-row: 2 / 4;
+            transform: translateX(2vh) translateY(14vh);
+        }
+        .kleinWort.pos3 {  /*namensliste*/
+            grid-column: 6/7;
+            grid-row: 3/5;
+            text-align: right;
+            font-family:  sans-serif, 'Arial Narrow Bold', sans-serif;
+            font-weight: medium;
+            font-style: normal;
+            font-size: normal;
+            overflow: hidden;
+            min-width: fit-content;
+            color: white;
+            font-size: 1vw;
+        }
 
-   
-    .pos1, .pos2, .pos3, .pos4 {
-        grid-column: 1 / 2; 
-        grid-row: auto; 
-    }*/
+        .kleinWort.pos4 { /* RSVP only */
+            grid-column: 1/2;
+            grid-row: 5/6;
+            transform: translateY(14vh) translateX(2vh);
+        }
 }
+
