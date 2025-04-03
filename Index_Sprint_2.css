@@ -7,15 +7,15 @@
 }
 
 button { /* Zurück Knopf*/
-    padding: 5px 15px;
-    font-size: 10px;
+    padding: 5px 10px;
+    font-size: 6px;
     background-color: #000000;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     position: fixed;
-    bottom: 20px;
+    bottom: 10px;
     right: 1%;
 }
 button:hover {
@@ -271,6 +271,14 @@ button:hover {
         
     }
 
+    button {
+        font-size: 6px; 
+        padding: 3px 8px; 
+        position: fixed;
+        bottom: 20px; 
+        right: 1%; 
+    }
+    
     .word {
         font-size: 20vw; 
         text-align: center; 
@@ -319,7 +327,7 @@ button:hover {
         .pos3 {  /*namensliste*/
             grid-column: 1 / 2;
             grid-row: 5/6;
-            transform: translateX(2vh) translateY(5vh);
+            transform: translateX(2vh) translateY(5.7vh);
             text-align: right;
         }
 
