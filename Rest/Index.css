@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    text-align: left;
     margin: 0;
     padding: 0;
     background-color: #000000;  /* Optional: Set background color */
@@ -11,6 +11,7 @@ h1.title {
     font-size: 6rem;
     color: #ffffff;
     margin-top: 20px;
+    transform: translateX(3vh);
 }
 
 /* Styling for the links and buttons */
