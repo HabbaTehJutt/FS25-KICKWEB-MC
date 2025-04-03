@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;  /* Optional: Set background color */
+}
+
+/* Title styling */
+h1.title {
+    font-size: 6rem;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+/* Styling for the links and buttons */
+a {
+    display: block;
+    margin: 20px;
+    text-decoration: none;
+}
+
+.content-box {
+    background-color: #ffffff;  /* Blue background color for the button */
+    color: #000000;  /* Text color */
+    padding: 20px 40px;
+    border-radius: 12px;  /* Makes the corners rounded */
+    transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+.content-box h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Hover effect to change button color and text color */
+.content-box:hover {
+    background-color: #151515;  /* Darker background when hovered */
+    color: #ffffff;  /* White text color when hovered */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 640px) {
+    .content-box {
+        padding: 15px 30px;
+    }
+}

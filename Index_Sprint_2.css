@@ -6,10 +6,9 @@
     text-align: left;
 }
 
-Button {
-    top: left;
-    padding: 10px 20px;
-    font-size: 16px;
+button { /* Zurück Knopf*/
+    padding: 5px 15px;
+    font-size: 10px;
     background-color: #000000;
     color: white;
     border: none;
@@ -17,7 +16,7 @@ Button {
     cursor: pointer;
     position: fixed;
     bottom: 20px;
-    left: 2%;
+    right: 1%;
 }
 button:hover {
     background-color: #dbdbdb;
@@ -52,7 +51,7 @@ button:hover {
     animation-name: T-Stretch;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    animation-delay: 3.5s;
+    animation-delay: 1.5s;
 }
 
 .letter.T2 path{
@@ -60,37 +59,34 @@ button:hover {
     animation-name: T2-Stretch;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    animation-delay: 4.5s;
+    animation-delay: 2.5s;
 }
-
 .letter.M path{
     transition:  1.5s ease-out;
  animation-name: M-Stretch;
  animation-duration: 4s;
  animation-iteration-count: infinite;
- animation-delay: 2s;
 }
 .letter.L path{
     transition:  1.5s ease-out;
  animation-name: L-Stretch;
  animation-duration: 4s;
  animation-iteration-count: infinite;
- animation-delay: 3s;
+ animation-delay: 1s;
 }
 .letter.N path{
     transition:  1.5s ease-out;
  animation-name: N-Stretch;
  animation-duration: 4s;
  animation-iteration-count: infinite;
- animation-delay: 4s;
+ animation-delay: 2s;
 }
-
 .letter.E path{
     transition:  1.5s ease-out;
  animation-name: E-Stretch;
  animation-duration: 4s;
  animation-iteration-count: infinite;
- animation-delay: 5s;
+ animation-delay: 3s;
 }
 
 
@@ -205,12 +201,6 @@ button:hover {
             grid-row: 3/5;
             text-align: right;
             font-family:  sans-serif, 'Arial Narrow Bold', sans-serif;
-            font-weight: medium;
-            font-style: normal;
-            font-size: normal;
-            overflow: hidden;
-            min-width: fit-content;
-            opacity: 100%;
             font-size: 1vw;
             transform: translateY(-12vh) translateX(-1vh)
             
@@ -314,31 +304,24 @@ button:hover {
         font-size: normal;
         color: white;   
     }
-        .kleinWort.pos1 { /* Further information */
+        .pos1 { /* Further information */
             grid-column: 1 / 2; 
             grid-row: 1 / 2;
             transform: translateX(2vh) translateY(14vh);
         }
-        .kleinWort.pos2 { /* Ted Talks */
+        .pos2 { /* Ted Talks */
             grid-column: 1 / 2; 
             grid-row: 2 / 4;
             transform: translateX(2vh) translateY(14vh);
         }
-        .kleinWort.pos3 {  /*namensliste*/
-            grid-column: 6/7;
-            grid-row: 3/5;
+        .pos3 {  /*namensliste*/
+            grid-column: 1 / 2;
+            grid-row: 5/6;
+            transform: translateX(2vh) translateY(5vh);
             text-align: right;
-            font-family:  sans-serif, 'Arial Narrow Bold', sans-serif;
-            font-weight: medium;
-            font-style: normal;
-            font-size: normal;
-            overflow: hidden;
-            min-width: fit-content;
-            color: white;
-            font-size: 1vw;
         }
 
-        .kleinWort.pos4 { /* RSVP only */
+        .pos4 { /* RSVP only */
             grid-column: 1/2;
             grid-row: 5/6;
             transform: translateY(14vh) translateX(2vh);
